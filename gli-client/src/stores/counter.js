@@ -1,5 +1,6 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
+import router from '../router';
 import axios from "axios";
 import Swal from "sweetalert2";
 
@@ -34,7 +35,7 @@ export const useCounterStore = defineStore({
     async registerHandler(value){
       try {
         console.log("<<<masuk ke registerHandler di counter.js");
-        
+
         const {data} = await axios({
           method: "POST",
           url: baseUrl + "users",
@@ -44,7 +45,7 @@ export const useCounterStore = defineStore({
         console.log(data);
 
         
-        this.router.push('users')
+        
 
       } catch (error) {
         console.log(error);

@@ -31,7 +31,7 @@ export default {
 
         <div class=" p-8 flex-col justify-around">
             <div class="bg-slate-400">
-                <h1 class=" font-mono text-5xl">testing 1</h1>
+                <h1 class=" font-mono text-5xl">Data Master User PT X</h1>
             </div>
             <div class="pt-12">
                 <button class="rounded-full h-12 bg-blue-500" @click=changePage()>Tambah User</button>
