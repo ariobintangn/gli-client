@@ -1,14 +1,20 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import Header from './components/Header.vue';
 </script>
 
 <template>
-  <header>    
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-  </header>
+  <div class="h-screen">
+<!-- 
+    <header>
+      <RouterLink to="/"></RouterLink>
+      <RouterLink to="/about"></RouterLink>
+    </header> -->
 
-  <RouterView />
+    <Header class="h-1/6"/>
+    
+    <RouterView class="h-5/6"/>
+  </div>
 </template>
 
 <style scoped>
