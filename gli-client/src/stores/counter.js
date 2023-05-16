@@ -30,6 +30,25 @@ export const useCounterStore = defineStore({
           footer: '<a href="">Why do I have this issue?</a>',
         });
       }
-    }
+    },
+    async registerHandler(value){
+      try {
+        console.log("<<<masuk ke registerHandler di counter.js");
+        
+        const {data} = await axios({
+          method: "POST",
+          url: baseUrl + "users",
+          data: value
+        })
+        console.log("masuk register sini juga");
+        console.log(data);
+
+        
+        this.router.push('users')
+
+      } catch (error) {
+        console.log(error);
+      }
+    },
   }
 })
